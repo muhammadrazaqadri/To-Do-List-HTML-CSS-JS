@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Step 1: Meta tags and title -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    
+    <!-- Step 2: Linking CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Step 3: Main container for input and list -->
+    <div class="Container">
+        <div class="todo-app">
+            <!-- Step 4: Heading for To-Do List -->
+            <h2>To-Do List <img src="./img/todo-app.png" alt="To-Do List Icon"></h2>
+            
+            <!-- Step 5: Input field and Add button -->
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+            
+            <!-- Step 6: Unordered list to display tasks -->
+            <ul id="list-Container">
+                <!-- List items will be added dynamically -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Step 7: Linking JavaScript file -->
+    <script src="app.js"></script>
+</body>
+</html>
