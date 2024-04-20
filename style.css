@@ -1,0 +1,161 @@
+
+/* Step 1: Global reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Step 2: Container styling */
+.Container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #d91460, #153677);
+    padding: 10px;
+}
+
+/* Step 3: To-Do App styling */
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background-color: #ffffff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+/* Step 4: To-Do App heading styling */
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Step 5: To-Do App heading icon styling */
+.todo-app h2 img {
+    width: 90px;
+    height: 60px;
+    margin-left: -20px;
+}
+
+/* Step 6: Row styling */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* Step 7: Input box styling */
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    padding: 10px;
+}
+
+/* Step 8: Button styling */
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #d91460;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+/* Step 9: Unordered list styling */
+ul li {
+    list-style-type: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Step 10: List item bullet styling */
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50px;
+    background-image: url("./img/circle.png");
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+/* Step 11: Checked list item styling */
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+
+/* Step 12: Checked list item bullet styling */
+ul li.checked::before {
+    background-image: url("img/Check.png");
+}
+
+/* Step 13: Close button styling */
+ul li span {
+    position: absolute;
+    right: 0px;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* Step 14: Close button hover styling */
+ul li span:hover {
+    background-color: #edeef0;
+}
+
+/* Media query for responsiveness */
+@media only screen and (max-width: 600px) {
+    .todo-app {
+        padding: 20px 15px 40px;
+        margin: 50px auto 20px;
+        max-width: 90%; /* Adjusted width for smaller screens */
+    }
+    .row {
+        /* flex-direction: column; */
+        align-items: stretch;
+    }
+    input {
+        margin-bottom: 15px;
+    }
+    button {
+        width: 100%; /* Button width set to 100% for full width */
+    }
+    ul li {
+        padding: 12px 8px; /* Adjusted padding for list items */
+        padding-left: 50px;
+    }
+    ul li span {
+        right: 8px; /* Adjusted position of close button */
+        top: 50%; /* Centered vertically */
+        transform: translateY(-50%); /* Centered vertically */
+        font-size: 20px; /* Reduced font size for close button */
+    }
+    ul li.checked {
+        color: #555;
+        text-decoration: line-through;
+        padding-left: 50px;
+    }
+}
